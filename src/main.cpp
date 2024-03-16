@@ -21,8 +21,8 @@
 char auth[] = "zvIuRCn5WWY10eVKKTm9A4luaodwObIv";
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Nha 66";
-char pass[] = "0353336703";
+char ssid[] = "VanTuyen";
+char pass[] = "0975617367";
 
 
 #define DHTPIN D4
@@ -238,7 +238,7 @@ void loop (){
       chedo_hoatdong =0;
       Blynk.virtualWrite(V4, HIGH);
       digitalWrite(RELAY, !(digitalRead(RELAY)));
-      Blynk.virtualWrite(V5, !(digitalRead(RELAY)));
+      Blynk.virtualWrite(V5, (digitalRead(RELAY)));
       Serial.println("Manual: The water pump is turned on !");
       delay(10000);
     }
